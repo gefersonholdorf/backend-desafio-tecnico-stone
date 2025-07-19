@@ -1,0 +1,10 @@
+services:
+  mysql: 
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: stone_db
+      MYSQL_USER: stone_user
+      MYSQL_PASSWORD: stone_password
+    ports:
+      - "3306:3306"

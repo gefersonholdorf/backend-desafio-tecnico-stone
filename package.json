@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
-    "start": "node --env-file .env --experimental-strip-types --no-warnings src/server.js"
+    "dev": "ts-node-dev --respawn --transpile-only --env-file .env src/server.ts",
+    "start": "tsc && node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,13 +12,16 @@
   "description": "",
   "dependencies": {
     "@fastify/cors": "^11.0.1",
+    "@prisma/client": "^6.12.0",
     "fastify": "^5.4.0",
     "fastify-type-provider-zod": "^5.0.2",
-    "typescript": "^5.8.3",
     "zod": "^4.0.5"
   },
   "devDependencies": {
     "@types/node": "^24.0.15",
-    "ts-node": "^10.9.2"
+    "prisma": "^6.12.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
   }
 }
