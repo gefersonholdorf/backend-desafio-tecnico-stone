@@ -1,3 +1,4 @@
+import type { FetchEmployeePresenter } from "../presenters/fetch-employees-presenter"
 import type { Employee } from "./employee"
 
 export interface FetchEmployeeResponseRepository {
@@ -5,5 +6,5 @@ export interface FetchEmployeeResponseRepository {
     page: number
     totalPerPage: number
     totalPages: number
-    employees: Employee[]
+    employees: FetchEmployeePresenter[]
 }
